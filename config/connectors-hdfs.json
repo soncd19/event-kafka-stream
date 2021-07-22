@@ -1,0 +1,23 @@
+[
+  {
+    "name": "sink-hdfs-event-user-info",
+    "connector.class": "io.confluent.connect.hdfs.HdfsSinkConnector",
+    "tasks.max": "1",
+    "storage.class":"io.confluent.connect.hdfs.storage.HdfsStorage",
+    "topics": "users-info",
+    "hdfs.url": "hdfs://localhost:9000",
+    "topics.dir": "vnevent-users",
+    "flush.size": "1000000",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": false,
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false,
+    "rotate.interval.ms": "300000",
+    "format.class": "io.confluent.connect.hdfs.json.JsonFormat",
+    "partitioner.class": " io.confluent.connect.storage.partitioner.TimeBasedPartitioner",
+    "path.format": "YYYY-MM-dd",
+    "partition.duration.ms": "3600000",
+    "locale": "en",
+    "timezone": "UTC"
+  }
+]

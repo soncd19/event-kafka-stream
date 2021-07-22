@@ -1,0 +1,15 @@
+[
+  {
+    "name": "sink-mongodb-event-user-info",
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "tasks.max": "1",
+    "topics": "users-info",
+    "connection.uri": "mongodb://localhost:27017",
+    "database": "vnevents",
+    "collection": "vnevent_user_info",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": false,
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false
+  }
+]

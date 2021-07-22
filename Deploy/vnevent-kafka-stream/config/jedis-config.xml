@@ -1,0 +1,9 @@
+<jedis id="jedisPoolConfig">
+    <host>localhost</host>
+    <port>6379</port>
+    <password>conchymNon@1912</password>
+    <timeout>30</timeout>
+    <maxIdle>300</maxIdle>
+    <maxTotal>60000</maxTotal>
+    <testOnBorrow>true</testOnBorrow>
+</jedis>

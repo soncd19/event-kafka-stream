@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<streams>
+    <stream id="1001">
+        <topic.in>vnevents</topic.in>
+        <topic.out>users-info</topic.out>
+        <stream.class>com.vnpay.event.process.VNEventDataStreamOriginalProcess</stream.class>
+    </stream>
+</streams>

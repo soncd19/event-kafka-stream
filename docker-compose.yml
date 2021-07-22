@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  redis:
+    image: redis:6.0.3-alpine
+    container_name: "my_redis"
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis_data:/data
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+  vnevent:
+    image: vnevent-stream:latest
+    container_name: vnevent_stream
+    network_mode: "host"
+    restart: always
+    volumes:
+      - ./logs/:/vnpay/logs
+    depends_on:
+      - redis

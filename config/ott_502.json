@@ -1,0 +1,12 @@
+{
+  "bankCode": "string",
+  "deviceModel": "string",
+  "osVersion": "string",
+  "sdkVersion": "string",
+  "access": "string",
+  "deviceType": "int",
+  "appVersion": "string",
+  "date": "date",
+  "httpCode": "int",
+  "count_httpCode": "int"
+}

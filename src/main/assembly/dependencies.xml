@@ -1,0 +1,29 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <directory>bin</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <filtered>true</filtered>
+            <includes>
+                <include>start_stream_app.sh</include>
+            </includes>
+            <fileMode>0750</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>config</directory>
+            <outputDirectory>/config</outputDirectory>
+            <filtered>true</filtered>
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>
